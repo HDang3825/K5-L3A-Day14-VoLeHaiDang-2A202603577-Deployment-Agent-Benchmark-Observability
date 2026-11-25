@@ -200,7 +200,7 @@ Total messages: 10
      ✅ Graceful shutdown
      ✅ Public URL ready (Railway / Render config)
 ----------------------------------------------------------------
-  Result: 12/12 tiêu chí đạt · 43/43 checks passed
+  Result: 12/12 tiêu chí đạt · 44/44 checks passed
   🎉 PASS 12/12 — PRODUCTION READY! Deploy nào!
 ```
 
@@ -210,4 +210,6 @@ Total messages: 10
 
 | Lần | Dùng cho phần nào | Hỏi gì | Nhận gì | Tự sửa & tự kiểm tra thế nào |
 |-----|-------------------|--------|---------|-------------------------------|
-| 1 | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| 1 | Tổng quan & Part 1–5 | Tóm tắt yêu cầu bài lab và hướng dẫn chạy từng checkpoint | Lộ trình 8 checkpoint và khung `MISSION_ANSWERS.md` | Tự chạy thực tế các lệnh trên WSL2/Docker (`curl`, `docker images`, `test_stateless.py`) và kiểm tra đối chiếu output thật |
+| 2 | Part 6 (`06-lab-complete/`) | Triển khai các TODO cho config, auth, Redis rate limiter, cost guard, JSON log, Dockerfile, compose, deploy config | Code hoàn chỉnh các module trong `06-lab-complete/` | Chạy `check_production_ready.py` trong WSL2 (có Docker) đạt `PASS 12/12 · 44/44 checks passed` |
+| 3 | Part 3 & Part 7 | Hướng dẫn deploy Render, chạy benchmark local (`load_test.py`, `run_eval.py`), sửa `KNOWLEDGE_BASE` và chạy Locust + Prometheus alerts | Lệnh chạy benchmark, bổ sung 2 entry vào `develop/utils/mock_llm.py`, sửa lỗi home path trong `production/Dockerfile` | Tự kiểm tra URL Render (`/health`, `/ready` trả `200`), chạy `eval_v2_fixed.json` đạt `23/23` (`PASS`), đối chiếu số liệu trong `BENCHMARK_REPORT.md` với JSON/CSV và ảnh chụp thật |
